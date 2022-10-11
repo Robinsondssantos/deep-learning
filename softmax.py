@@ -13,3 +13,8 @@ def simple_softmax(l=[]):
     for i in exp_list:
         final_list.append(i/total)
     return final_list
+
+def simple_softmax2(l=[]):
+    exp_list = [math.e**x for x in l]
+    total = sum(exp_list)
+    return [i / total for i in exp_list]
